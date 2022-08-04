@@ -1,5 +1,3 @@
-console.log('hello world')
-
 (() => {
     const message = document.querySelector('#message');
 
