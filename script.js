@@ -24,12 +24,15 @@
         } = position.coords;
 
         message.classList.add('success');
-        message.textContent = `Your location: (${latitude},${longitude})`;
+        var timeLeft = 30;
+            var elem = document.getElementById('some_div');
+        message.textContent = `YOUR LOCATION: (${latitude},${longitude}) MISSLE INBOUND`;
     }
+
 
     // handle error case
     function onError() {
         message.classList.add('error');
-        message.textContent = `Failed to get your location!`;
+        message.textContent = `TARGET SEQUENCE INTERRUPTED`;
     }
 })();

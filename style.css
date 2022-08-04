@@ -11,7 +11,10 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; 
 }
-
+footer {
+  margin: auto;
+  width: 50%;
+}
 body {
   font-family: "Nunito", sans-serif;
   color: rgb(244, 230, 205);
@@ -20,19 +23,51 @@ body {
   background-color: #171d1d;
   align-content: center;
 }
+link {
+  color: cadetblue;
+}
 
 button {
-  font-size: 1.1em;
-  background-color: #EBF5FF;
-  color: #4312AE;
-  border: 2px solid black;
-  box-shadow: 4px 4px 4px #999999;
+  font-size: 4em;
+  margin: auto;
+  width: 50%;
+  background-color: #16251c;
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid rgb(3, 78, 38);
+  box-shadow: 4px 4px 4px #0c140f;
 }
 button:hover, button:focus, button:active {
   /* swap colors */
-  color: #EBF5FF;
-  background-color: #4312AE;
+  color: #f88d14;
+  background-color: #ff3333;
   cursor: pointer; /* displays a hand */
+}
+
+.btn {
+  display:block;
+  margin-top: 50px;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 10px solid rgb(0, 0, 0);
+  
+}
+
+.success {
+  display:block;
+  align-content: center;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  height: 140px;
+  width: 70%;
+  font-size: 25px;
+  color: #000000;
+  background-color: #ff3333;
+  border: 10px solid rgb(0, 0, 0);
 }
 
 header {
