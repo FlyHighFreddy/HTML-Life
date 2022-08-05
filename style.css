@@ -10,6 +10,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; 
+  align-content: center;
 }
 footer {
   margin: auto;
@@ -60,8 +61,8 @@ button:hover, button:focus, button:active {
   text-align: center;
   margin: auto;
   width: 50%;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 140px;
   width: 70%;
   font-size: 25px;
@@ -69,6 +70,33 @@ button:hover, button:focus, button:active {
   background-color: #ff3333;
   border: 10px solid rgb(0, 0, 0);
 }
+
+.error {
+  display:block;
+  align-content: center;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 40px;
+  width: 80%;
+  font-size: 18px;
+  color: #000000;
+  background-color: #ff3333;
+  border: 5px solid rgb(0, 0, 0);
+}
+
+.float-container {
+  border: 3px solid #fff;
+  padding: 20px;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+}  
 
 header {
   width: clamp(200px, 80%, 600px);
@@ -89,9 +117,8 @@ header {
 .gallery {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(9, 5vw);
+  grid-template-rows: repeat(5, 5vw);
   gap: 1.5rem; 
-  align-content: center;
 }
 
 .gallery__img {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="quiz.js"></script>
     <script src="script.js"></script>
     <TITLE>FlyHighFreddy's Photography</TITLE>
 </head>
@@ -18,6 +19,7 @@
         <H3>
             <a href="https://www.instagram.com/flyhighfreddy/?hl=en">Check out @FlyHighFreddy on Instagram</a>
         </H3>
+        
     </header>
     
 
@@ -55,13 +57,24 @@
     </div>
     <footer>
         <div class="container">
-            <button id="show" class="btn">VERIFY TARGET LOCATION</button>
-            <div id="message"></div>
+            <div class="float-child">
+                   <img src="5line.JPG" alt="Table 46 out of JFIRE" width="250px">
+            </div>
+            <div class="float-child">
+                <button id="show" class="btn">VERIFY FRIENDLY LOCATION</button>
+            </div>    
         </div>
+        
+        <div class="container"><font size="+5">5-Line Call for Fire request</font></div> 
+        <div id="message"></div>
+            <br>
+                <input class="input" type="text" id="5lineRequest" placeholder="Line 4 - Number of Tanks?">
+                <input class="submit" type="submit" id="formSubmit" onclick="launchHellfire()" value="Fire When ready, Over.">
+            <br>
+        </p>
+        <p id="missileImpact"></p>
         <script src="script.js"></script>
-        <div id="countdown">
-            <div id="countdown-number"></div>
-         </div>
+
         <p>For requests to use my photos, contact me at <a href="Fred.Starfleet@gmail.com">Fred.Starfleet@gmail.com</a>.</p>
 
     </footer>   
