@@ -10,7 +10,7 @@
 
     // handle click event
     const btn = document.querySelector('#show');
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function (){
         // get the current position
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     });
@@ -35,20 +35,49 @@
     }
 })();
 
+//5-Line Call for fire
 function launchHellfire(){
-    let h = 0;
-    let missileQuantity = document.getElementById("5lineRequest").value;
-
-    if (isNaN(missileQuantity)){
+    let hellfiresLaunced = 0;
+    let missileQuantityRequested = document.getElementById("5lineRequest").value;
+    
+    //If user puts in a non-number
+    if (isNaN(missileQuantityRequested)){
         alert("Invalid Call for fire request. Please select number of missiles to fire.");
 
-    }
-    
-    while (h < missileQuantity) {
-        const agm = '<img src="hellfire.gif" height="100" />'
-        h++;
-        document.getElementById("missileImpact");
-        missileImpact.insertAdjacentHTML("afterend", agm);
+    } else if(missileQuantityRequested < 1){
+        alert("No munitions requested.");
 
+    } else if(missileQuantityRequested > 16){
+        alert("Only 16 Hellfires available on board shooter aircraft.");
+
+    } else if(missileQuantityRequested < 16){
+        alert(`Roger, ${missileQuantityRequested} missiles, RIFLE, Time-of-flight 6 seconds`);
+
+    //Time-of-flight remaining timer
+    var timeleft = 6;
+    var timeOfFlight = setInterval(function(){
+        if(timeleft <= 3){
+        clearInterval(timeOfFlight);
+        document.getElementById("timeOfFlight").innerHTML = `<font size="+7">**SPLASH, OVER**</font>
+        `
+        hellfireImpact()
+        
+        } else {
+        document.getElementById("timeOfFlight").innerHTML = `<font size="+5">${timeleft} seconds</font>`
+        }
+        
+        timeleft -= 1;
+    }, 1000);
+
+    //comparing the request# to launch#
+
+    function hellfireImpact (){
+        while (hellfiresLaunced < missileQuantityRequested) {
+            const agm = '<img src="hellfire.gif" height="100" />'
+            hellfiresLaunced++;
+            document.getElementById("missileImpact");
+            missileImpact.insertAdjacentHTML("afterend", agm);
+            }
+        }
     }
-}
+}[]
