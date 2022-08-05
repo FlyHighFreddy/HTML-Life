@@ -24,8 +24,6 @@
         } = position.coords;
 
         message.classList.add('success');
-        var timeLeft = 30;
-            var elem = document.getElementById('some_div');
         message.textContent = `YOUR LOCATION: (${latitude},${longitude}) MISSLE INBOUND`;
     }
 
