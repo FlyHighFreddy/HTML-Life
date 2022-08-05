@@ -51,10 +51,10 @@ function launchHellfire(){
         alert("Only 16 Hellfires available on board shooter aircraft.");
 
     } else if(missileQuantityRequested < 16){
-        alert(`Roger, ${missileQuantityRequested} missiles, RIFLE, Time-of-flight 6 seconds`);
+        alert(`Roger, ${missileQuantityRequested} missiles, RIFLE, Time-of-flight 12 seconds`);
 
     //Time-of-flight remaining timer
-    var timeleft = 6;
+    var timeleft = 12;
     var timeOfFlight = setInterval(function(){
         if(timeleft <= 3){
         clearInterval(timeOfFlight);
@@ -63,7 +63,7 @@ function launchHellfire(){
         hellfireImpact()
         
         } else {
-        document.getElementById("timeOfFlight").innerHTML = `<font size="+5">${timeleft} seconds</font>`
+        document.getElementById("timeOfFlight").innerHTML = `<font size="+5">TOF - ${timeleft} seconds</font>`
         }
         
         timeleft -= 1;
