@@ -24,7 +24,7 @@
         } = position.coords;
 
         message.classList.add('success');
-        message.textContent = `VISUAL FRIENDLY LOCATION: (${latitude},${longitude})`;
+        message.textContent = `VISUAL - FRIENDLY LOCATION: (${latitude},${longitude})`;
     }
 
 
